@@ -26,7 +26,7 @@ Um swift package executable criado para organizar conteudos em uma pasta.
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/ciceronascimento/Organizador-de-arquivos/blob/main/Sources/Organizador-de-arquivos/img/Captura%20de%20Tela%202022-03-28%20às%2021.49.21.png)
 
 
 ## Melhorias
