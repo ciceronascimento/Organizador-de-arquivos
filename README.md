@@ -42,7 +42,7 @@ v1.0.0 - Suporte aos tipos de arquivos:
 - zip, dmg, 7z, rar
 ## Contribuindo
 
-Faça o fork do projeto ()
+Faça o fork do projeto (https://github.com/ciceronascimento/Organizador-de-arquivos)
 
 Crie uma branch para sua modificação (git checkout -b Test/Issuexxx)
 
