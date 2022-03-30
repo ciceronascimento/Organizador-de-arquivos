@@ -79,7 +79,7 @@ class Arquivos{
     }
     
     func visualizarConteudo(){
-        print("\nListando arquivos", terminator: "")
+        print("\nListando arquivos e pastas", terminator: "")
         sleep(1)
         print(".", terminator: "")
         sleep(1)
@@ -87,8 +87,10 @@ class Arquivos{
         sleep(1)
         print(".")
         sleep(1)
-        
-        print("Arquivos:\n", listagemFiles)
+        print("\n  ================ARQUIVOS===================\n")
+        for file in listagemFiles{
+            print(" |", "\u{2794} ",  (file.path as NSString).lastPathComponent)
+        }
     }
     
     func criarPastas(){
@@ -137,7 +139,7 @@ class Arquivos{
                     if tipo == "Audio"{
                         for extensoes in extensao{
                                 if fileStr.hasSuffix(extensoes){
-                                    print("Movendo:", file.path , "para: ", diretorioMusica)
+                                    print("Movendo:", (file.path as NSString).lastPathComponent , "para a pasta: Organizer - Audios")
                                     let nameFile = (file.path as NSString).lastPathComponent
                                     let fileDest = diretorioMusica + "/" + nameFile
                                     try FileManager.default.moveItem(atPath: file.path, toPath: fileDest)
@@ -146,7 +148,7 @@ class Arquivos{
                     } else if tipo == "Imagem"{
                         for extensoes in extensao{
                                 if fileStr.hasSuffix(extensoes){
-                                    print("Movendo:", file.path , "para: ", diretorioImagem)
+                                    print("Movendo:", (file.path as NSString).lastPathComponent , "para a pasta: Organizer - Imagens")
                                     let nameFile = (file.path as NSString).lastPathComponent
                                     let fileDest = diretorioImagem + "/" + nameFile
                                     try FileManager.default.moveItem(atPath: file.path, toPath: fileDest)
@@ -155,7 +157,7 @@ class Arquivos{
                     } else if tipo == "Documentos" || tipo == "Code"{
                         for extensoes in extensao{
                                 if fileStr.hasSuffix(extensoes){
-                                    print("Movendo:", file.path , "para: ", diretorioDocs)
+                                    print("Movendo:", (file.path as NSString).lastPathComponent , "para a pasta: Organizer - Documentos")
                                     let nameFile = (file.path as NSString).lastPathComponent
                                     let fileDest = diretorioDocs + "/" + nameFile
                                     try FileManager.default.moveItem(atPath: file.path, toPath: fileDest)
@@ -164,7 +166,7 @@ class Arquivos{
                     } else if tipo == "Executaveis"{
                         for extensoes in extensao{
                             if fileStr.hasSuffix(extensoes){
-                                print("Movendo:", file.path , "para: ", diretorioExec)
+                                print("Movendo:", (file.path as NSString).lastPathComponent , "para a pasta: Organizer - Executaveis")
                                 let nameFile = (file.path as NSString).lastPathComponent
                                 let fileDest = diretorioExec + "/" + nameFile
                                 try FileManager.default.moveItem(atPath: file.path, toPath: fileDest)
