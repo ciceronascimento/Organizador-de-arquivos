@@ -33,6 +33,8 @@ Um swift package executable criado para organizar conteudos em uma pasta.
 
 ## Melhorias
 
+v1.0.1 - Prints das listagens de arquivos e arquivos movidos agora estão formatados possibilitando uma melhor visualização!
+
 v1.0.0 - Suporte aos tipos de arquivos:
 
 - jpg, gif, jpeg, png
