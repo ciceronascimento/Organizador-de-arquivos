@@ -122,21 +122,30 @@ Serão criados os seguintes repositorios caso não se encontrem em seu sistema:
         if !FileManager.default.fileExists(atPath: pastaImagem.path) || !FileManager.default.fileExists(atPath: pastaAudio.path) || !FileManager.default.fileExists(atPath: pastaDocumento.path) || !FileManager.default.fileExists(atPath: pastaExecutaveis.path){
             do {
                 
-                try FileManager.default.createDirectory(atPath: pastaImagem.path, withIntermediateDirectories: true, attributes: nil)
+                let result = Result { try FileManager.default.createDirectory(atPath: pastaImagem.path, withIntermediateDirectories: true, attributes: nil) }
                  
-                try FileManager.default.createDirectory(atPath: pastaAudio.path, withIntermediateDirectories: true, attributes: nil)
+                let result2 = Result { try FileManager.default.createDirectory(atPath: pastaAudio.path, withIntermediateDirectories: true, attributes: nil) }
 
-                try FileManager.default.createDirectory(atPath: pastaDocumento.path, withIntermediateDirectories: true, attributes: nil)
+                let result3 = Result { try FileManager.default.createDirectory(atPath: pastaDocumento.path, withIntermediateDirectories: true, attributes: nil) }
                 
-                try FileManager.default.createDirectory(atPath: pastaExecutaveis.path, withIntermediateDirectories: true, attributes: nil)
+                let result4 = Result { try FileManager.default.createDirectory(atPath: pastaExecutaveis.path, withIntermediateDirectories: true, attributes: nil) }
                 
-                print("Pastas criadas!")
+                
+//                switch (result, result2, result3, result4){
+//                case .success:
+//                    print("sucesso")
+//                    arquivos.visualizarConteudo()
+//                case .failure:
+//                    print("deu ruim")
+//                }
+//            
+                print(result)
                 sleep(2)
             } catch {
                 print(error.localizedDescription)
             }
         } else {
-            print("Nenhuma pasta precisou ser criada. :)")
+            print("Nenhuma pasta foi criada. :)")
             sleep(2)
         }
             

@@ -36,7 +36,7 @@ repeat{
         arquivos.permissao()
         arquivos.localizar(escolha: download)
         arquivos.criarPastas()
-        arquivos.visualizarConteudo()
+//        arquivos.visualizarConteudo()
         arquivos.separarArquivos()
         sleep(5)
         
@@ -44,7 +44,7 @@ repeat{
         arquivos.permissao()
         arquivos.localizar(escolha: documentos)
         arquivos.criarPastas()
-        arquivos.visualizarConteudo()
+//        arquivos.visualizarConteudo()
         arquivos.separarArquivos()
         sleep(5)
         
