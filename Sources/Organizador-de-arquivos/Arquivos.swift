@@ -37,6 +37,20 @@ class Arquivos{
         "Executaveis": [".zip", ".dmg", ".7z", ".rar"]
     ]
     
+    func permissao(){
+        print("""
+* Obs: O Organizador-de-arquivos precisará de permissão aos seus diretórios para criar/ler/mover alguns arquivos
+Serão criados os seguintes repositorios caso não se encontrem em seu sistema:
+
+     \u{2794}    Organizer - imagens
+     \u{2794}    Organizer - audios
+     \u{2794}    Organizer - documentos
+     \u{2794}    Organizer - executaveis
+
+
+""")
+        sleep(3)
+    }
     
     func localizar(escolha: String){
         

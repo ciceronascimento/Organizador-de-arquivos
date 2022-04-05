@@ -33,6 +33,7 @@ repeat{
     
     switch escolhaInt{
     case 1:
+        arquivos.permissao()
         arquivos.localizar(escolha: download)
         arquivos.criarPastas()
         arquivos.visualizarConteudo()
@@ -40,6 +41,7 @@ repeat{
         sleep(5)
         
     case 2:
+        arquivos.permissao()
         arquivos.localizar(escolha: documentos)
         arquivos.criarPastas()
         arquivos.visualizarConteudo()
